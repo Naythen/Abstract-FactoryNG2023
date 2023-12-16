@@ -1,5 +1,5 @@
 package lethalCompany;
 
-public interface Flashlight {
+public interface WalkieTalkie {
 	void assemble();
 }
