@@ -1,0 +1,12 @@
+package tiers;
+
+import lethalCompany.Component;
+
+public class NoobFlashlight implements Component{
+
+	@Override
+	public void assemble() {		
+	}
+	
+}
+

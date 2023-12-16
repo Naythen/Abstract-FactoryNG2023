@@ -1,0 +1,13 @@
+package tiers;
+
+import lethalCompany.Weapon;
+
+public class ProWeapon implements Weapon{
+
+	@Override
+	public void assemble() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

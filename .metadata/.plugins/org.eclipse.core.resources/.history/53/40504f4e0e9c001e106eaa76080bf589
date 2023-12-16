@@ -1,0 +1,30 @@
+package mainapp;
+
+import lethalCompany.Flashlight;
+import lethalCompany.LethalCompany;
+import lethalCompany.WalkieTalkie;
+import lethalCompany.Weapon;
+import tiers.LethalTier;
+import tiers.NoobTier;
+import tiers.ProTier;
+
+public class TestMain00 {
+
+	public static void main(String[] args) {
+		LethalCompany noob = new NoobTier();
+		Flashlight noobFlashlight = noob.createFlashlight();
+		Weapon noobWeapon = noob.createWeapon();
+		WalkieTalkie noobWalkieTalkie = noob.createWalkieTalkie();
+		
+		LethalCompany pro = new ProTier();
+		Flashlight ProFlashlight = pro.createFlashlight();
+		Weapon ProWeapon = pro.createWeapon();
+		WalkieTalkie ProWalkieTalkie = pro.createWalkieTalkie();
+		
+		LethalCompany lethal = new LethalTier();
+		Flashlight LethalFlashlight = lethal.createFlashlight();
+		Weapon LethalWeapon = lethal.createWeapon();
+		WalkieTalkie LethalWalkieTalkie = lethal.createWalkieTalkie();
+	}
+
+}

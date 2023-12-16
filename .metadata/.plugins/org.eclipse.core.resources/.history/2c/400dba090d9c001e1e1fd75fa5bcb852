@@ -1,0 +1,31 @@
+package lethalCompany;
+
+public abstract class LethalCompany {
+	
+//	public abstract Flashlight createFlashlight();
+//	public abstract Weapon createWeapon();
+//	public abstract WalkieTalkie createWalkieTalkie();
+	public abstract Component createComponent(String type);
+	
+//	public Component assembleFlashlight() {
+//		Component flashlight = createComponent("Flashlight");
+//		flashlight.assemble();
+//		return flashlight;
+//	}
+//	
+//	
+//	public Component assembleWeapon() {
+//		Component weapon = createComponent("Weapon");
+//		weapon.assemble();
+//		return weapon;
+//	}
+//
+//	
+//	public Component assembleWalkieTalkie() {
+//		Component walkietalkie = createComponent("WalkieTalkie");
+//		walkietalkie.assemble();
+//		return walkietalkie;
+//		
+//	}
+
+}

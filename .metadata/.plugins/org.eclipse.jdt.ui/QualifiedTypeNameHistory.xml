@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="tiers.ProWalkieTalkie"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="tiers.LethalFlashlight"/>
+    <fullyQualifiedTypeName name="tiers.LethalWeapon"/>
+    <fullyQualifiedTypeName name="tiers.LethalWalkieTalkie"/>
+    <fullyQualifiedTypeName name="lethalCompany.LethalCompany"/>
+    <fullyQualifiedTypeName name="lethalCompany.Component"/>
+    <fullyQualifiedTypeName name="lethalCompany.Flashlight"/>
+    <fullyQualifiedTypeName name="lethalCompany.Weapon"/>
+    <fullyQualifiedTypeName name="lethalCompany.WalkieTalkie"/>
+</qualifiedTypeNameHistroy>

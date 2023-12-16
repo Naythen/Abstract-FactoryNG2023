@@ -1,0 +1,13 @@
+package tiers;
+
+import lethalCompany.WalkieTalkie;
+
+public class ProWalkieTalkie implements WalkieTalkie{
+
+	@Override
+	public void assemble() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package tiers;
+
+import lethalCompany.Component;
+import lethalCompany.WalkieTalkie;
+
+public class LethalWalkieTalkie implements Component{
+
+	@Override
+	public void assemble() {		
+	}
+
+}

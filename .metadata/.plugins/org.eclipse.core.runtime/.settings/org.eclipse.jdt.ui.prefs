@@ -1,5 +1,6 @@
 content_assist_completion_replacement_background=200,200,0
 content_assist_completion_replacement_foreground=200,0,0
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="lethalCompany.WalkieTalkie"><rhs name\="tiers.ProWalkieTalkie"/><rhs name\="tiers.LethalWalkieTalkie"/></lhs><lhs name\="lethalCompany.Flashlight"><rhs name\="tiers.LethalFlashlight"/></lhs><lhs name\="lethalCompany.Weapon"><rhs name\="tiers.LethalWeapon"/></lhs><lhs name\="lethalCompany.Component"><rhs name\="tiers.LethalFlashlight"/><rhs name\="tiers.LethalWeapon"/><rhs name\="tiers.LethalWalkieTalkie"/></lhs></history>
 content_assist_number_of_computers=13
 content_assist_parameters_background=52,57,61
 content_assist_parameters_foreground=238,238,238
