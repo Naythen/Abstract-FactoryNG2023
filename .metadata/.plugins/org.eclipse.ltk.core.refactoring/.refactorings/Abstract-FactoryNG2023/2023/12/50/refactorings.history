@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;border.png&apos; to &apos;Abstract-FactoryNG2023/src/resorce&apos;&#x0D;&#x0A;- Original project: &apos;Abstract-FactoryNG2023&apos;&#x0D;&#x0A;- Destination element: &apos;Abstract-FactoryNG2023/src/resorce&apos;&#x0D;&#x0A;- Original element: &apos;border.png&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src&lt;resorce" element1="imageResorce/border.png" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1702733760320" units="0" version="1.0"/>
+</session>

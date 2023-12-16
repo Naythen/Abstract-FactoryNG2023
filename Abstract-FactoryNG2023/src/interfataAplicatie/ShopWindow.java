@@ -2,21 +2,38 @@ package interfataAplicatie;
 
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Image;
+import java.awt.ScrollPane;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
 
 import java.awt.BorderLayout;
-import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import javax.swing.Box;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import com.jgoodies.forms.layout.FormSpecs;
 
 public class ShopWindow {
 
 	private JFrame frame;
 	protected int dimensiuneFereastra =200;
 	protected int[] ratie= {4,3};
-	protected Color screenColor = new Color(0x050705);
-	protected ImageIcon borderImagePath= new ImageIcon("\\imageResorce\\border");
+	protected Color screenColor = new Color(0x051005);//0x050705
+	protected ImageIcon borderImage;
 	/**
 	 * Launch the application.
 	 */
@@ -30,9 +47,57 @@ public class ShopWindow {
 					e.printStackTrace();
 				}
 			}
-		});
+		});;
 	}
+	void setTxtArea() {
 
+        double percentageDistance = 0.15;
+        int textAreaWidth = (int) (frame.getWidth() * (1 - 2 * percentageDistance));
+        int textAreaHeight = (int) (frame.getHeight() * (1 - 2 * percentageDistance));
+        int textAreaX = (int)(frame.getWidth() * percentageDistance);
+        int textAreaY = (int)(frame.getHeight() * percentageDistance);
+        JTextArea textArea = new JTextArea();
+        textArea.setForeground(new Color(0, 255, 0));
+		textArea.setBounds(textAreaX, textAreaY, textAreaWidth ,textAreaHeight);
+		textArea.setFont(new Font("NewTimesRoman", Font.BOLD, 30));
+		textArea.setBackground(screenColor);
+		textArea.setLineWrap(true); 
+	    textArea.setWrapStyleWord(true);
+	    textArea.addKeyListener(new KeyListener(){
+            @Override
+            public void keyPressed(KeyEvent e) {
+            	// TODO Auto-generated method stub
+            }
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+				// TODO Auto-generated method stub
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    textArea.setText(null);
+                 }
+			}
+        });
+		frame.getContentPane().add(textArea);
+	}
+	void setBorderImage() {
+		Image originalImage = new ImageIcon(ShopWindow.class.getResource("/resorce/border.png")).getImage();
+		int newWidth = frame.getWidth();
+        int newHeight = frame.getHeight();
+        Image scaledImage = originalImage.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
+        borderImage= new ImageIcon(scaledImage);
+        frame.getContentPane().setLayout(null);
+        
+        JLabel lblNewLabel = new JLabel("New label");
+        lblNewLabel.setBounds(0, 6, 849, 600);
+		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
+		lblNewLabel.setIcon(borderImage);
+		frame.getContentPane().add(lblNewLabel);
+	}
 	/**
 	 * Create the application.
 	 */
@@ -46,10 +111,13 @@ public class ShopWindow {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setResizable(false);
-		frame.getContentPane().setBackground(screenColor);
-		frame.getContentPane().add(new JLabel(borderImagePath));
-		frame.setBounds(100, 100, ratie[0]*dimensiuneFereastra, ratie[1]*dimensiuneFereastra);
+		frame.setBounds(0, 0, ratie[0]*dimensiuneFereastra, ratie[1]*dimensiuneFereastra);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		frame.getContentPane().setBackground(screenColor);
+		
+		setBorderImage();
+		setTxtArea();
+		frame.revalidate();
 	}
-
 }
