@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\Sebastian\Desktop\GitHub\.metadata\.plugins\org.eclipse.jdt.core
+429798894.index
+2085607797.index
+1543532649.index
+1865797976.index
+2577472803.index
