@@ -18,7 +18,7 @@ public class TestMain00 {
 		noobWeapon.assemble();
 		WalkieTalkie noobWalkieTalkie = noob.createWalkieTalkie();
 		noobWalkieTalkie.assemble();
-		
+
 		LethalCompany pro = new ProTier();
 		Flashlight ProFlashlight = pro.createFlashlight();
 		ProFlashlight.assemble();

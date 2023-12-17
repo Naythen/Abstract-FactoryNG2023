@@ -1,0 +1,8 @@
+package lethalCompany;
+
+public interface Weapon {
+	static double cost = 0;
+
+	void assemble();
+
+}

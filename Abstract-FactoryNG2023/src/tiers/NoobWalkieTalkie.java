@@ -3,12 +3,10 @@ package tiers;
 import lethalCompany.WalkieTalkie;
 
 public class NoobWalkieTalkie implements WalkieTalkie{
-
+	private static final double  cost = 10;
 	@Override
 	public void assemble() {
-		System.out.println("NoobWalkieTalkie assembled!");
-
-		
+		System.out.println("NoobWalkieTalkie assembled! and it costs:" + cost);
 	}
 
 }

@@ -15,7 +15,7 @@
     <fullyQualifiedTypeName name="tiers.NoobTier"/>
     <fullyQualifiedTypeName name="lethalCompany.Flashlight"/>
     <fullyQualifiedTypeName name="lethalCompany.Weapon"/>
-    <fullyQualifiedTypeName name="lethalCompany.WalkieTalkie"/>
     <fullyQualifiedTypeName name="tiers.ProTier"/>
     <fullyQualifiedTypeName name="tiers.LethalTier"/>
+    <fullyQualifiedTypeName name="lethalCompany.WalkieTalkie"/>
 </qualifiedTypeNameHistroy>

@@ -4,9 +4,10 @@ import lethalCompany.Weapon;
 
 public class ProWeapon implements Weapon{
 
-	@Override
+	private final static double cost = 50;
+
 	public void assemble() {
-		System.out.println("ProWeapon assembled!");
+		System.out.println("ProWeapon assembled!" + cost);
 		
 	}
 

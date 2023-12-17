@@ -1,0 +1,14 @@
+package tiers;
+
+import lethalCompany.Weapon;
+
+public class NoobWeapon implements Weapon{
+
+	static double cost = 25;
+
+	public void assemble() {
+		System.out.println("NoobWeapon assembled!");
+		
+	}
+
+}
