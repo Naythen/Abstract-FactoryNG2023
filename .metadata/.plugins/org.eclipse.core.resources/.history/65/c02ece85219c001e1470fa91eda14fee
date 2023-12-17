@@ -1,0 +1,86 @@
+package interfataAplicatie;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import java.awt.BorderLayout;
+import javax.swing.SwingConstants;
+import javax.swing.JTextArea;
+
+public class ShopWindow {
+
+	private JFrame frame;
+	protected int dimensiuneFereastra =200;
+	protected int[] ratie= {4,3};
+	protected Color screenColor = new Color(0x051005);//0x050705
+	protected ImageIcon borderImage;
+	protected JTextArea textArea;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ShopWindow window = new ShopWindow();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});;
+	}
+	void setTxtArea() {
+
+        double percentageDistance = 0.2;
+        int textAreaWidth = (int) (frame.getWidth() * (1 - 2 * percentageDistance));
+        int textAreaHeight = (int) (frame.getHeight() * (1 - 2 * percentageDistance));
+        int textAreaX = (int)(frame.getWidth() * percentageDistance);
+        int textAreaY = (int)(frame.getHeight() * percentageDistance);
+
+        // Create a JTextArea
+        textArea = new JTextArea();
+        textArea.setBounds(textAreaX, textAreaY, textAreaWidth, textAreaHeight);
+        
+        frame.add(textArea);
+	}
+	void setBorderImage() {
+		Image originalImage = new ImageIcon(ShopWindow.class.getResource("/resorce/border.png")).getImage();
+		int newWidth = frame.getWidth();// Adjust 20 based on your layout
+        int newHeight = frame.getHeight();// Adjust 20 based on your layout
+        Image scaledImage = originalImage.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
+        borderImage= new ImageIcon(scaledImage);
+        
+        JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
+		lblNewLabel.setIcon(borderImage);
+		frame.getContentPane().add(lblNewLabel, BorderLayout.CENTER);
+	}
+	/**
+	 * Create the application.
+	 */
+	public ShopWindow() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setResizable(false);
+		frame.setBounds(100, 100, ratie[0]*dimensiuneFereastra, ratie[1]*dimensiuneFereastra);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		frame.getContentPane().setBackground(screenColor);
+		
+		setBorderImage();
+		setTxtArea();
+	}
+
+}

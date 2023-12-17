@@ -1,4 +1,4 @@
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="lethalCompany.WalkieTalkie"><rhs name\="tiers.LethalWalkieTalkie"/><rhs name\="tiers.NoobWalkieTalkie"/><rhs name\="tiers.ProWalkieTalkie"/></lhs><lhs name\="lethalCompany.Flashlight"><rhs name\="tiers.LethalFlashlight"/><rhs name\="tiers.NoobFlashlight"/><rhs name\="tiers.ProFlashlight"/></lhs><lhs name\="lethalCompany.Weapon"><rhs name\="tiers.LethalWeapon"/><rhs name\="tiers.NoobWeapon"/><rhs name\="tiers.ProWeapon"/></lhs><lhs name\="lethalCompany.Component"><rhs name\="tiers.LethalFlashlight"/><rhs name\="tiers.LethalWeapon"/><rhs name\="tiers.LethalWalkieTalkie"/></lhs><lhs name\="lethalCompany.LethalCompany"><rhs name\="tiers.NoobTier"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"/>
 content_assist_number_of_computers=13
 eclipse.preferences.version=1
 org.eclipse.jdt.ui.formatterprofiles.version=21
