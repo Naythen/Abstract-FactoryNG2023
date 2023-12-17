@@ -2,15 +2,17 @@ package interfataAplicatie;
 
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Image;
+import java.awt.ScrollPane;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
 
 import java.awt.BorderLayout;
-<<<<<<< Updated upstream
-import javax.swing.JPanel;
-=======
 import javax.swing.SwingConstants;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
@@ -38,17 +40,12 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import javax.swing.JPasswordField;
->>>>>>> Stashed changes
 
 public class ShopWindow {
 
 	private JFrame frame;
 	protected int dimensiuneFereastra =200;
 	protected int[] ratie= {4,3};
-<<<<<<< Updated upstream
-	protected Color screenColor = new Color(0x050705);
-	protected ImageIcon borderImagePath= new ImageIcon("\\imageResorce\\border");
-=======
 	protected Color screenColor = new Color(0x051005);//0x050705
 	protected ImageIcon borderImage;
 	private JTextField txtLogIn;
@@ -89,7 +86,6 @@ public class ShopWindow {
              }
 			}
 		}};
->>>>>>> Stashed changes
 	/**
 	 * Launch the application.
 	 */
@@ -104,48 +100,42 @@ public class ShopWindow {
 				}
 			}
 		});
-<<<<<<< Updated upstream
-	}
-
-=======
 	}
 	
 	void verifyAdminAccount() {
 		String getUsername = usernameField.getText();
 		char[] getPassword = passwordField.getPassword();
-
-		// Convert the char array to a string for comparison
-		String enteredPasswordString = new String(getPassword);
-
-		System.out.println(getUsername + " " + enteredPasswordString);
-
+		System.out.println(getUsername+" "+getPassword.toString()+" "+password.toCharArray());
 		boolean usr = getUsername.equals(username);
-		boolean psw = enteredPasswordString.equals(password);
-
-		System.out.println(usr + " " + psw);
-
-		if (usr && psw) {
-		    panel.setVisible(false);
-		    textArea.setVisible(true);
+		boolean psw = getPassword.equals(password.toCharArray());
+		System.out.println(usr+" "+psw);
+		if(usr && psw) {
+			panel.setVisible(false);
+			textArea.setVisible(true);
 		}
-
 	}
 	void setTxtArea() {
-		textArea = new JTextArea();
-		textArea.setForeground(new Color(0, 255, 0));
-		
+
+        double percentageDistance = 0.15;
+        int textAreaWidth = (int) (frame.getWidth() * (1 - 2 * percentageDistance));
+        int textAreaHeight = (int) (frame.getHeight() * (1 - 2 * percentageDistance));
+        int textAreaX = (int)(frame.getWidth() * percentageDistance);
+        int textAreaY = (int)(frame.getHeight() * percentageDistance);
+        textArea = new JTextArea();
+        textArea.setVisible(false);
+        textArea.setForeground(new Color(0, 255, 0));
+		textArea.setBounds(textAreaX, textAreaY, textAreaWidth ,textAreaHeight);
 		textArea.setFont(new Font("NewTimesRoman", Font.BOLD, 30));
-		textArea.setBackground(new Color(128, 0, 64));
+		textArea.setBackground(screenColor);
 		textArea.setLineWrap(true); 
-		textArea.setWrapStyleWord(true);
-		textArea.addKeyListener(EnterSetup);
-		
-		frame.getContentPane().add(textArea);
+	    textArea.setWrapStyleWord(true);
+	    textArea.addKeyListener(EnterSetup);
+	    frame.getContentPane().add(textArea);
 	}
 	void setLoginPanel() {
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(0, 0, 624, 425);
+		lblNewLabel.setBounds(0, 10, 677, 422);
 		frame.getContentPane().add(lblNewLabel);
 		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
 		lblNewLabel.setIcon(borderImage);
@@ -157,7 +147,6 @@ public class ShopWindow {
 		panel.setLayout(null);
 		
 		txtLogIn = new JTextField();
-		txtLogIn.setEditable(false);
 		txtLogIn.setBorder(null);
 		txtLogIn.setHorizontalAlignment(SwingConstants.CENTER);
 		txtLogIn.setText("Log In");
@@ -188,7 +177,6 @@ public class ShopWindow {
 		passwordField.setBackground(new Color(5, 16, 5));
 		
 		txtUsername = new JTextField();
-		txtUsername.setEditable(false);
 		txtUsername.setBorder(null);
 		txtUsername.setText("Username:");
 		txtUsername.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -200,7 +188,6 @@ public class ShopWindow {
 		panel.add(txtUsername);
 		
 		txtPassword = new JTextField();
-		txtPassword.setEditable(false);
 		txtPassword.setBorder(null);
 		txtPassword.setText("Password:");
 		txtPassword.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -219,7 +206,6 @@ public class ShopWindow {
         borderImage= new ImageIcon(scaledImage);
         frame.getContentPane().setLayout(null);
 	}
->>>>>>> Stashed changes
 	/**
 	 * Create the application.
 	 */
@@ -233,12 +219,6 @@ public class ShopWindow {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setResizable(false);
-<<<<<<< Updated upstream
-		frame.getContentPane().setBackground(screenColor);
-		frame.getContentPane().add(new JLabel(borderImagePath));
-		frame.setBounds(100, 100, ratie[0]*dimensiuneFereastra, ratie[1]*dimensiuneFereastra);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-=======
 		frame.setBounds(0, 0, 638, 462);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -249,7 +229,5 @@ public class ShopWindow {
 		setTxtArea();
 		
 		frame.revalidate();
->>>>>>> Stashed changes
 	}
-
 }
