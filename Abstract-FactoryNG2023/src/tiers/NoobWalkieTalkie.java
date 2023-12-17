@@ -6,7 +6,11 @@ public class NoobWalkieTalkie implements WalkieTalkie{
 	private static final double  cost = 10;
 	@Override
 	public void assemble() {
-		System.out.println("NoobWalkieTalkie assembled! and it costs:" + cost);
+		System.out.println("NoobWalkieTalkie assembled!" );
+	}
+	@Override
+	public double getCost() {
+		return cost;
 	}
 
 }

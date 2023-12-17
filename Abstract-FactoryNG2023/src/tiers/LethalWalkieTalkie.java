@@ -7,8 +7,13 @@ public class LethalWalkieTalkie implements WalkieTalkie{
 
 	@Override
 	public void assemble() {		
-		System.out.println("LethalWalkieTalkie assembled!"+cost);
+		System.out.println("LethalWalkieTalkie assembled!");
 
+	}
+
+	@Override
+	public double getCost() {
+		return cost;
 	}
 
 }

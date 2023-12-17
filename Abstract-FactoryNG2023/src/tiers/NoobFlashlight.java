@@ -7,7 +7,12 @@ public class NoobFlashlight implements Flashlight{
 
 	@Override
 	public void assemble() {
-		System.out.println("NoobFlashlight assembled!"+cost);
+		System.out.println("NoobFlashlight assembled!");
+	}
+
+	@Override
+	public double getCost() {
+		return cost;
 	}
 	
 }

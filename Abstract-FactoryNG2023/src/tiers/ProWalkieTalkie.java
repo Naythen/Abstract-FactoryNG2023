@@ -7,8 +7,13 @@ public class ProWalkieTalkie implements WalkieTalkie{
 
 	@Override
 	public void assemble() {
-		System.out.println("ProWalkieTalkie assembled!"+ cost);
+		System.out.println("ProWalkieTalkie assembled!");
 		
+	}
+
+	@Override
+	public double getCost() {
+		return cost;
 	}
 
 }

@@ -7,8 +7,13 @@ public class ProFlashlight implements Flashlight{
 
 	@Override
 	public void assemble() {
-		System.out.println("ProFlashlight assembled!"+cost);
+		System.out.println("ProFlashlight assembled!");
 		
+	}
+
+	@Override
+	public double getCost() {
+		return cost;
 	}
 	
 }
