@@ -64,8 +64,6 @@ public class ShopWindow {
 	private String username =new String("admin");
 	private String password =new String("admin");
 	
-	private boolean meniu = false;
-	
 	
 	private KeyListener EnterSetup = new KeyListener() {
 
@@ -89,7 +87,7 @@ public class ShopWindow {
 			// TODO Auto-generated method stub
 			if(panel_text_area.isVisible()) {
             if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                
+                textArea_1.setText("hello world!");
              }
 			}
 		}
@@ -110,20 +108,7 @@ public class ShopWindow {
 			}
 		});
 	}
-	void meniuAlegere(){
-		String choice = textField.getText();
-		choice = choice.toLowerCase();
-		String first = choice.substring(0,choice.indexOf(" "));
-		String last = choice.substring(choice.indexOf(" "));
-		switch(first) {
-		case "store":
-		case "log out":
-		case "noob":
-			switch(last) {
-			case:"flash"
-			}
-		}
-	}
+	
 	void verifyAdminAccount() {
 		String getUsername = usernameField.getText();
 		char[] getPassword = passwordField.getPassword();
@@ -141,8 +126,6 @@ public class ShopWindow {
 		if (usr && psw) {
 		    panel_login.setVisible(false);
 		    panel_text_area.setVisible(true);
-		    meniu=true;
-		    meniuShop();
 		}
 
 	}
@@ -211,7 +194,7 @@ public class ShopWindow {
 		panel_login.add(txtPassword);
 		
 		panel_text_area = new JPanel();
-		panel_text_area.setBackground(new Color(5, 16, 5));
+		panel_text_area.setBackground(new Color(0, 0, 0));
 		panel_text_area.setBounds(34, 27, 563, 375);
 		frame.getContentPane().add(panel_text_area);
 		panel_text_area.setLayout(null);
@@ -219,17 +202,12 @@ public class ShopWindow {
 		textArea_1 = new JTextArea();
 		textArea_1.setBounds(44, 29, 479, 264);
 		panel_text_area.add(textArea_1);
-		textArea_1.setEditable(false);
 		textArea_1.setLineWrap(true); 
-		textArea_1.setBackground(new Color(5, 16, 5));
 		textArea_1.setWrapStyleWord(true);
 		
 		textField = new JTextField();
 		textField.setBounds(44, 303, 479, 19);
-		textField.setBackground(new Color(5, 16, 5));
 		textField.setEditable(true);
-		textField.addKeyListener(EnterSetup);
-		textField.setBorder(null);
 		
 		panel_text_area.add(textField);
 		textField.setColumns(10);
@@ -248,11 +226,6 @@ public class ShopWindow {
 		frame.getContentPane().add(BorderImage);
 		BorderImage.setVerticalAlignment(SwingConstants.TOP);
 		BorderImage.setIcon(borderImagePath);
-	}
-	
-	void meniuShop () {
-		textArea_1.setText(new String("\tStore\n\tshop\n\tlog out"));
-		textField.setText(" write your choice!");
 	}
 	/**
 	 * Create the application.
@@ -274,13 +247,11 @@ public class ShopWindow {
 		frame.setBounds(0, 0, 638, 462);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		frame.getContentPane().setBackground(new Color(5, 16, 5));
+		frame.getContentPane().setBackground(Color.white);
         frame.getContentPane().setLayout(null);
 		
 		setBorderImage();
 		setLoginPanel();
-		
-		panel_text_area.setVisible(false);
 		
 		frame.revalidate();
 		

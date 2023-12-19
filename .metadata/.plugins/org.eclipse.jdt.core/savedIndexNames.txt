@@ -3,7 +3,3 @@ INDEX VERSION 1.131+C:\Users\Akasha\Documents\GitHub\Abstract-FactoryNG2023\.met
 2577472803.index
 1865797976.index
 2085607797.index
-<<<<<<< Updated upstream
-=======
-2365647914.index
->>>>>>> Stashed changes

@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-# List of external plug-in models previously loaded. Timestamp: 1702726139230
-=======
-# List of external plug-in models previously loaded. Timestamp: 1702816694691
->>>>>>> Stashed changes
+# List of external plug-in models previously loaded. Timestamp: 1702972863193
 file:/C:/Users/Akasha/Desktop/eclipse-java-2021/eclipse-2021/plugins/ch.qos.logback.classic_1.2.3.v20200428-2012.jar
 file:/C:/Users/Akasha/Desktop/eclipse-java-2021/eclipse-2021/plugins/ch.qos.logback.core_1.2.3.v20200428-2012.jar
 file:/C:/Users/Akasha/Desktop/eclipse-java-2021/eclipse-2021/plugins/ch.qos.logback.slf4j_1.2.3.v20200428-2012.jar

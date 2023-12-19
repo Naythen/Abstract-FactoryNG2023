@@ -57,14 +57,11 @@ public class ShopWindow {
 	private JPasswordField passwordField;
 	private JTextField txtUsername;
 	private JTextField txtPassword;
-	private JTextArea textArea_1;
-	private JPanel panel_login;
-	private JPanel panel_text_area;
+	private JTextArea textArea;
+	private JPanel panel;
 	
 	private String username =new String("admin");
 	private String password =new String("admin");
-	
-	private boolean meniu = false;
 	
 	
 	private KeyListener EnterSetup = new KeyListener() {
@@ -77,7 +74,7 @@ public class ShopWindow {
 		@Override
 		public void keyPressed(KeyEvent e) {
 			// TODO Auto-generated method stub
-			if(panel_login.isVisible()) {
+			if(panel.isVisible()) {
 				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 					verifyAdminAccount();
 				}
@@ -87,14 +84,13 @@ public class ShopWindow {
 		@Override
 		public void keyReleased(KeyEvent e) {
 			// TODO Auto-generated method stub
-			if(panel_text_area.isVisible()) {
+			if(textArea.isVisible()) {
             if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                
+                textArea.setText(null);
              }
 			}
 		}
 	};
-	private JTextField textField;
 	/**
 	 * Launch the application.
 	 */
@@ -110,20 +106,7 @@ public class ShopWindow {
 			}
 		});
 	}
-	void meniuAlegere(){
-		String choice = textField.getText();
-		choice = choice.toLowerCase();
-		String first = choice.substring(0,choice.indexOf(" "));
-		String last = choice.substring(choice.indexOf(" "));
-		switch(first) {
-		case "store":
-		case "log out":
-		case "noob":
-			switch(last) {
-			case:"flash"
-			}
-		}
-	}
+	
 	void verifyAdminAccount() {
 		String getUsername = usernameField.getText();
 		char[] getPassword = passwordField.getPassword();
@@ -139,21 +122,21 @@ public class ShopWindow {
 		System.out.println(usr + " " + psw);
 
 		if (usr && psw) {
-		    panel_login.setVisible(false);
-		    panel_text_area.setVisible(true);
-		    meniu=true;
-		    meniuShop();
+		    panel.setVisible(false);
+		    textArea.setVisible(true);
 		}
 
 	}
+	void setTxtArea() {
+	}
 	void setLoginPanel() {
 		
-		panel_login = new JPanel();
-		panel_login.setForeground(new Color(128, 255, 255));
-		panel_login.setBackground(new Color(5, 16, 5));
-		panel_login.setBounds(152, 109, 317, 208);
-		frame.getContentPane().add(panel_login);
-		panel_login.setLayout(null);
+		panel = new JPanel();
+		panel.setForeground(new Color(128, 255, 255));
+		panel.setBackground(new Color(5, 16, 5));
+		panel.setBounds(152, 109, 317, 208);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
 		
 		txtLogIn = new JTextField();
 		txtLogIn.setEditable(false);
@@ -164,7 +147,7 @@ public class ShopWindow {
 		txtLogIn.setFont(new Font("Monospaced", Font.BOLD, 30));
 		txtLogIn.setBackground(new Color(5, 16, 5));
 		txtLogIn.setBounds(61, 37, 165, 46);
-		panel_login.add(txtLogIn);
+		panel.add(txtLogIn);
 		txtLogIn.setColumns(10);
 		
 		usernameField = new JTextField();
@@ -174,7 +157,7 @@ public class ShopWindow {
 		usernameField.setFont(new Font("Monospaced", Font.PLAIN, 10));
 		usernameField.setBackground(new Color(5, 16, 5));
 		usernameField.setBounds(151, 93, 101, 19);
-		panel_login.add(usernameField);
+		panel.add(usernameField);
 		usernameField.setColumns(10);
 		
 		passwordField = new JPasswordField();
@@ -183,7 +166,7 @@ public class ShopWindow {
 		passwordField.setBorder(null);
 		passwordField.setFont(new Font("Monospaced", Font.PLAIN, 10));
 		passwordField.setBounds(151, 122, 101, 19);
-		panel_login.add(passwordField);
+		panel.add(passwordField);
 		passwordField.setBackground(new Color(5, 16, 5));
 		
 		txtUsername = new JTextField();
@@ -196,7 +179,7 @@ public class ShopWindow {
 		txtUsername.setColumns(10);
 		txtUsername.setBackground(new Color(5, 16, 5));
 		txtUsername.setBounds(34, 93, 107, 20);
-		panel_login.add(txtUsername);
+		panel.add(txtUsername);
 		
 		txtPassword = new JTextField();
 		txtPassword.setEditable(false);
@@ -208,33 +191,8 @@ public class ShopWindow {
 		txtPassword.setColumns(10);
 		txtPassword.setBackground(new Color(5, 16, 5));
 		txtPassword.setBounds(34, 121, 107, 20);
-		panel_login.add(txtPassword);
-		
-		panel_text_area = new JPanel();
-		panel_text_area.setBackground(new Color(5, 16, 5));
-		panel_text_area.setBounds(34, 27, 563, 375);
-		frame.getContentPane().add(panel_text_area);
-		panel_text_area.setLayout(null);
-		
-		textArea_1 = new JTextArea();
-		textArea_1.setBounds(44, 29, 479, 264);
-		panel_text_area.add(textArea_1);
-		textArea_1.setEditable(false);
-		textArea_1.setLineWrap(true); 
-		textArea_1.setBackground(new Color(5, 16, 5));
-		textArea_1.setWrapStyleWord(true);
-		
-		textField = new JTextField();
-		textField.setBounds(44, 303, 479, 19);
-		textField.setBackground(new Color(5, 16, 5));
-		textField.setEditable(true);
-		textField.addKeyListener(EnterSetup);
-		textField.setBorder(null);
-		
-		panel_text_area.add(textField);
-		textField.setColumns(10);
+		panel.add(txtPassword);
 	}
-	
 	void setBorderImage() {
 		Image originalImage = new ImageIcon(ShopWindow.class.getResource("/resorce/border.png")).getImage();
 		int newWidth = frame.getWidth()-10;
@@ -248,11 +206,6 @@ public class ShopWindow {
 		frame.getContentPane().add(BorderImage);
 		BorderImage.setVerticalAlignment(SwingConstants.TOP);
 		BorderImage.setIcon(borderImagePath);
-	}
-	
-	void meniuShop () {
-		textArea_1.setText(new String("\tStore\n\tshop\n\tlog out"));
-		textField.setText(" write your choice!");
 	}
 	/**
 	 * Create the application.
@@ -274,13 +227,12 @@ public class ShopWindow {
 		frame.setBounds(0, 0, 638, 462);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		frame.getContentPane().setBackground(new Color(5, 16, 5));
+		frame.getContentPane().setBackground(Color.white);
         frame.getContentPane().setLayout(null);
 		
 		setBorderImage();
 		setLoginPanel();
-		
-		panel_text_area.setVisible(false);
+		setTxtArea();
 		
 		frame.revalidate();
 		

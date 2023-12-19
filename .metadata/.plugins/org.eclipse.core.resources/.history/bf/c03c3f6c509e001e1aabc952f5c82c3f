@@ -110,20 +110,7 @@ public class ShopWindow {
 			}
 		});
 	}
-	void meniuAlegere(){
-		String choice = textField.getText();
-		choice = choice.toLowerCase();
-		String first = choice.substring(0,choice.indexOf(" "));
-		String last = choice.substring(choice.indexOf(" "));
-		switch(first) {
-		case "store":
-		case "log out":
-		case "noob":
-			switch(last) {
-			case:"flash"
-			}
-		}
-	}
+	
 	void verifyAdminAccount() {
 		String getUsername = usernameField.getText();
 		char[] getPassword = passwordField.getPassword();
