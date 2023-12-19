@@ -1,0 +1,55 @@
+package interfataAplicatie;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+
+public class ShopWindow {
+
+	private JFrame frame;
+	protected int dimensiuneFereastra =200;
+	protected int[] ratie= {4,3};
+	protected Color screenColor = new Color(0x050705);
+	protected ImageIcon borderImagePath= new ImageIcon("\\imageResorce\\border");
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ShopWindow window = new ShopWindow();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public ShopWindow() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setResizable(false);
+		frame.getContentPane().setBackground(screenColor);
+		frame.getContentPane().add(new JLabel("",borderImagePath,JLabel.CENTER));
+		frame.setBounds(100, 100, ratie[0]*dimensiuneFereastra, ratie[1]*dimensiuneFereastra);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}

@@ -1,0 +1,48 @@
+package tiers;
+
+import lethalCompany.Component;
+import lethalCompany.Flashlight;
+import lethalCompany.LethalCompany;
+import lethalCompany.WalkieTalkie;
+import lethalCompany.Weapon;
+
+public class LethalTier extends LethalCompany {
+
+//	@Override
+//	public Flashlight createFlashlight() {
+//		// TODO Auto-generated method stub
+//		return new LethalFlashlight();
+//	}
+//
+//	@Override
+//	public Weapon createWeapon() {
+//		// TODO Auto-generated method stub
+//		return new LethalWeapon();
+//	}
+//
+//	@Override
+//	public WalkieTalkie createWalkieTalkie() {
+//		// TODO Auto-generated method stub
+//		return new LethalWalkieTalkie();
+//	}
+
+	@Override
+	public Component createComponent(String type) {
+		// TODO Auto-generated method stub
+		Component component = null;
+		if("Flashlight".equals(type)) {
+			component = new LethalFlashlight();
+		}
+		else if("Weapon".equals(type)) {
+			component = new LethalWeapon();
+		}
+		else if("WalkieTalkie".equals(type)){
+			component = new LethalWalkieTalkie();
+		}
+		else {
+			System.out.println("ERROR!");
+		}
+		return component;
+	}
+
+}

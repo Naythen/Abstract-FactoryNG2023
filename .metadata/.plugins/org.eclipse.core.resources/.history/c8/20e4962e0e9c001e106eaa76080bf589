@@ -1,0 +1,11 @@
+package tiers;
+
+import lethalCompany.WalkieTalkie;
+
+public class LethalWalkieTalkie implements WalkieTalkie{
+
+	@Override
+	public void assemble() {		
+	}
+
+}

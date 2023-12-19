@@ -1,0 +1,13 @@
+package tiers;
+
+import lethalCompany.Flashlight;
+
+public class LethalFlashlight implements Flashlight{
+
+	@Override
+	public void assemble() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

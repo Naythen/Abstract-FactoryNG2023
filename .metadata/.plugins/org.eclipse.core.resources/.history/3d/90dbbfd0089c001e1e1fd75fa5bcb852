@@ -1,0 +1,28 @@
+package tiers;
+
+import lethalCompany.Flashlight;
+import lethalCompany.LethalCompany;
+import lethalCompany.WalkieTalkie;
+import lethalCompany.Weapon;
+
+public class ProTier extends LethalCompany{
+
+	@Override
+	public Flashlight createFlashlight() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Weapon createWeapon() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public WalkieTalkie createWalkieTalkie() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
