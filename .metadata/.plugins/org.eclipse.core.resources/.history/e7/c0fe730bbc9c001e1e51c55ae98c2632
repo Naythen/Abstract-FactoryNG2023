@@ -1,6 +1,0 @@
-package lethalCompany;
-
-public interface Flashlight {
-	public static final double cost = 0;
-	void assemble();
-}

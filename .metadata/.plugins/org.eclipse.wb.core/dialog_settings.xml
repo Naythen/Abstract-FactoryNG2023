@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.wb.internal.core.model.property.editor.string.StringPropertyDialog">
-		<item key="x" value="450"/>
-		<item key="y" value="1280"/>
+		<item key="x" value="729"/>
+		<item key="y" value="495"/>
 		<item key="width" value="700"/>
 		<item key="height" value="440"/>
 	</section>
@@ -11,5 +11,17 @@
 		<item key="y" value="1272"/>
 		<item key="width" value="700"/>
 		<item key="height" value="455"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.property.order.ReorderDialog">
+		<item key="x" value="619"/>
+		<item key="y" value="273"/>
+		<item key="width" value="682"/>
+		<item key="height" value="473"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.util.RenameConvertSupport$RenameDialog">
+		<item key="x" value="610"/>
+		<item key="y" value="322"/>
+		<item key="width" value="700"/>
+		<item key="height" value="375"/>
 	</section>
 </section>

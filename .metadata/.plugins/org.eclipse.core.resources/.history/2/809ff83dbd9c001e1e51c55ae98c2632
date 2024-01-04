@@ -1,7 +1,0 @@
-package lethalCompany;
-
-public interface WalkieTalkie {
-	static double cost = 0;
-
-	void assemble();
-}
