@@ -256,9 +256,6 @@ public class ShopWindow {
         panel_confirm = new JPanel();
         panel_confirm.setVisible(false);
         
-        panel_meniu = new JPanel();
-        panel_meniu.setVisible(false);
-        
         BackToTheLoby = new JButton("BACK");
         BackToTheLoby.setName("");
         BackToTheLoby.setForeground(Color.GREEN);
@@ -290,18 +287,8 @@ public class ShopWindow {
 			}
 		});
         
-        JLabel BorderImage = new JLabel("New label");
-        BorderImage.setForeground(new Color(0, 0, 0));
-        BorderImage.setBounds(0, 0, 624, 425);
-        frame.getContentPane().add(BorderImage);
-        BorderImage.setVerticalAlignment(SwingConstants.TOP);
-        BorderImage.setIcon(borderImagePath);
-        
-        
-        
-        
-        
-        frame.getContentPane().add(BackToTheLoby);
+        panel_meniu = new JPanel();
+        panel_meniu.setVisible(false);
         
         panel_login = new JPanel();
         panel_login.setForeground(new Color(128, 255, 255));
@@ -405,6 +392,14 @@ public class ShopWindow {
         txtLethalCompany.setBackground(new Color(5, 16, 5));
         txtLethalCompany.setBounds(10, 71, 499, 52);
         panel_meniu.add(txtLethalCompany);
+        
+        JLabel BorderImage = new JLabel("New label");
+        BorderImage.setForeground(new Color(0, 0, 0));
+        BorderImage.setBounds(0, 0, 624, 425);
+        frame.getContentPane().add(BorderImage);
+        BorderImage.setVerticalAlignment(SwingConstants.TOP);
+        BorderImage.setIcon(borderImagePath);
+        frame.getContentPane().add(BackToTheLoby);
         
         panel_money = new JPanel();
         panel_money.setBackground(new Color(5, 16, 5));
