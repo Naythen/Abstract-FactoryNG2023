@@ -4,6 +4,7 @@ import lethalCompany.WalkieTalkie;
 
 //Concrete component for lethal tier of the component 'WalkieTalkie'
 
+
 public class LethalWalkieTalkie implements WalkieTalkie{
 	private final static double cost = 40;
 

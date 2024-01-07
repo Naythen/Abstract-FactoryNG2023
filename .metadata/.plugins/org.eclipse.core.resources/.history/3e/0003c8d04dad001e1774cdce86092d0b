@@ -4,6 +4,7 @@ import lethalCompany.WalkieTalkie;
 
 //Concrete component for pro tier of the component 'WalkieTalkie'
 
+
 public class ProWalkieTalkie implements WalkieTalkie{
 	private final static double cost = 25;
 

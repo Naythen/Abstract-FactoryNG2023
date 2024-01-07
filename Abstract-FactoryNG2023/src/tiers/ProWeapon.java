@@ -2,6 +2,8 @@ package tiers;
 
 import lethalCompany.Weapon;
 
+//Concrete component for pro tier of the component 'Weapon'
+
 public class ProWeapon implements Weapon{
 
 	private final static double cost = 50;

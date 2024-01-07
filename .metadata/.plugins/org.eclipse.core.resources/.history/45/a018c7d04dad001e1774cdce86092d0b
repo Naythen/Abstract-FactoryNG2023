@@ -4,6 +4,7 @@ import lethalCompany.WalkieTalkie;
 
 //Concrete component for noob tier of the component 'WalkieTalkie'
 
+
 public class NoobWalkieTalkie implements WalkieTalkie{
 	private static final double  cost = 10;
 	@Override

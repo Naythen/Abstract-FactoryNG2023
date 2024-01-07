@@ -2,7 +2,7 @@ package tiers;
 
 import lethalCompany.Flashlight;
 
-// Concrete component for lethal tier of the component 'Flashlight'
+//Concrete component for lethal tier of the component 'Flashlight'
 
 public class LethalFlashlight implements Flashlight{
 	private final static double cost = 50;

@@ -2,6 +2,8 @@ package tiers;
 
 import lethalCompany.Weapon;
 
+//Concrete component for noob tier of the component 'Weapon'
+
 public class NoobWeapon implements Weapon{
 
 	private final static double cost = 25;

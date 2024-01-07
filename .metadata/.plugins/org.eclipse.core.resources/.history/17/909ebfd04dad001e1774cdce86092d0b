@@ -1,6 +1,6 @@
 package lethalCompany;
 
-// Interface for the component 'Weapon' made by the factories
+//Interface for the component 'Weapon' made by the factories
 
 public interface Weapon {
 	

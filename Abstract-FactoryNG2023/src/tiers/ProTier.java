@@ -5,6 +5,8 @@ import lethalCompany.LethalCompany;
 import lethalCompany.WalkieTalkie;
 import lethalCompany.Weapon;
 
+//Concrete factory for pro tier of the components
+
 public class ProTier extends LethalCompany{
 
 	@Override

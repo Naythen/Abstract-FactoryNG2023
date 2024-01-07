@@ -5,6 +5,8 @@ import lethalCompany.LethalCompany;
 import lethalCompany.WalkieTalkie;
 import lethalCompany.Weapon;
 
+//Concrete factory for noob tier of the components
+
 public class NoobTier extends LethalCompany{
 
 	@Override
